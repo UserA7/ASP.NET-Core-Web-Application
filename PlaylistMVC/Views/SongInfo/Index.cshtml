@@ -1,0 +1,49 @@
+﻿@model IEnumerable<PlaylistMVC.Models.SongInfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <form>
+        <button asp-action="Create">Create New</button>
+    </form>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtistName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SongName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtistName)
+            </td>
+            <td>
+                    <form style="display:inline">
+                        <button class="button-edit" asp-action="Edit" asp-route-id="@item.Id">Edit</button>
+                    </form> |
+                    <form style="display:inline">
+                        <button class="button-details" asp-action="Details" asp-route-id="@item.Id">Details</button>
+                    </form> |
+                    <form style="display:inline">
+                        <button class="button-delete" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
+                    </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
