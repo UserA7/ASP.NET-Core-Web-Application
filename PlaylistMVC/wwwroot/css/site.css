@@ -32,7 +32,7 @@ body {
     text-align: center;
     padding: 10px 28px;
     color: #fff;
-    background-color: #1ED760;
+    background-color: plum;
     height: 30px;           
 }
 
@@ -51,7 +51,7 @@ body {
     text-align: center;
     padding: 10px 28px;
     color: #fff;
-    background-color: #15883e;
+    background-color: mediumpurple;
     height: 30px;
 }
 
@@ -69,8 +69,8 @@ body {
     font-weight: 700;
     text-align: center;
     padding: 10px 28px;
-    color: #616467;
-    box-shadow: inset 0 0 0 2px #616467;
+    color: purple;
+    box-shadow: inset 0 0 0 2px purple;
     background-color: transparent;
     height: 30px;
 }

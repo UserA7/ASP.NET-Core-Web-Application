@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PlaylistMVC.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\wwwroot\\css\\mytheme.css",
+      "PackagePath": "staticwebassets\\css\\mytheme.css"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
