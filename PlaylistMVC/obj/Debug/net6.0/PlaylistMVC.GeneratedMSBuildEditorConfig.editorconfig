@@ -9,89 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PlaylistMVC
 build_property.RootNamespace = PlaylistMVC
-build_property.ProjectDir = C:\Users\User\Desktop\Университет\2 семестър\Уеб програмиране с .NET\PlaylistWebApp\PlaylistMVC\PlaylistMVC\
+build_property.ProjectDir = C:\Users\User\Desktop\GOD\PlaylistMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\Университет\2 семестър\Уеб програмиране с .NET\PlaylistWebApp\PlaylistMVC\PlaylistMVC
+build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\GOD\PlaylistMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/_AuthLayout.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/Home/Index.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/Home/Privacy.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/Shared/Error.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/SongInfo/Create.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0RldGFpbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongDetails/SongDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0RldGFpbHNcU29uZ0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongInfo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0luZm9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/SongInfo/Delete.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongInfo/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0luZm9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/SongInfo/Details.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongInfo/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0luZm9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/SongInfo/Edit.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongInfo/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0luZm9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/SongInfo/Index.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/SongInfo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ0luZm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/_ViewImports.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/_ViewStart.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Университет/2 семестър/Уеб програмиране с .NET/PlaylistWebApp/PlaylistMVC/PlaylistMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/User/Desktop/GOD/PlaylistMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-s8o0u5vtv1

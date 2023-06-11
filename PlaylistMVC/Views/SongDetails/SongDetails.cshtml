@@ -1,0 +1,45 @@
+﻿@model PlaylistMVC.Models.ApiModels.SearchResponse;
+
+@{
+    ViewData["Title"] = "SongDetails";
+}
+<body>
+<h3 style="text-align:center">Search For A Song</h3>
+
+<form method="post" asp-action="GetSongDetails">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter a song name" name="songName" />
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
+
+@if (Model.Tracks.Hits.Count > 0) 
+{
+    <div class="container">
+        <div class="row">
+            @foreach (var hit in Model.Tracks.Hits)
+            {
+                <div class="col">
+                        <div class="card border-info mb-3" style="max-width: 20rem; height: 30rem;">
+                        <img src="@hit.Images.Default" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@hit.Heading.Title</h5>
+                            <p class="card-text">
+                                <div><b>Artist:</b> @hit.Heading.Subtitle</div>
+                                <div><b>Alias:</b> @hit.Alias</div>
+                                <div><b>Listen here:</b> <a href="@hit.Stores.Apple.Actions[0].Uri">Apple Music</a></div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <p>No song details found.</p>
+}
+</body>

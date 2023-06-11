@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\PlaylistMVC.csproj": {}
+    "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\PlaylistMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\PlaylistMVC.csproj": {
+    "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\PlaylistMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\PlaylistMVC.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\PlaylistMVC.csproj",
         "projectName": "PlaylistMVC",
-        "projectPath": "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\PlaylistMVC.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\PlaylistMVC.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Университет\\2 семестър\\Уеб програмиране с .NET\\PlaylistWebApp\\PlaylistMVC\\PlaylistMVC\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -84,9 +84,21 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.13, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "RapidAPISDK": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             }
           },
           "imports": [

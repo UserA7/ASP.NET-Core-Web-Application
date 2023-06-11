@@ -3,15 +3,21 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>My Playlist</h1>
+<div>
+   <h1 style="display:inline">My Playlist </h1>
+   <img src="/images/music.intro.png" style=" display:inline; width:110px; height:110px;" alt="Intro" />
+</div>
+@*<p style="display:inline-block;">
+    <h1 style="display:inline">My Playlist</h1>
+    <img src="/images/music.intro.png" style="max-height:100%; max-width: 100%">
+</p>*@
 
 <p>
     <form>
         <button class="button-edit" asp-action="Create">Create New</button>
     </form>
 </p>
-<table class="table">
+<table class="table" style="border: 1px solid;">
     <thead>
         <tr>
             <th>
