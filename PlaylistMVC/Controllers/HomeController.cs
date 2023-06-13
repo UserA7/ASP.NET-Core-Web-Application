@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using PlaylistMVC.Models;
 using System.Diagnostics;
 
@@ -28,6 +29,31 @@ namespace PlaylistMVC.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetAllTimeSongs()
+        {
+            using(var _httpClient = new HttpClient())
+            {
+                _httpClient.DefaultRequestHeaders.Add("X-RapidAPI-Key", "fd598c74cbmsh70010f8e638b9c8p115781jsn56068c4a489d");
+                string apiUrl = "https://billboard3.p.rapidapi.com/greatest-hot-100-singles";
+
+                HttpResponseMessage response = await _httpClient.GetAsync($"{apiUrl}?range=1-20");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsStringAsync();
+                    List<AllTimeWorld> topChart = JsonConvert.DeserializeObject<List<AllTimeWorld>>(result);
+                    return View("AllTimeResult1", topChart);
+                }
+                else
+                {
+                    // Handle the error scenario, e.g., return an error view
+                    return View("Error");
+                }
+
+            }
         }
     }
 }

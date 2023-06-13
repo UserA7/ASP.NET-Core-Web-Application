@@ -2,8 +2,113 @@
     ViewData["Title"] = "Home Page";
 }
 
+<main class="page landing-page">
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">MusicApp</h1>
 </div>
-
+    <div class="carousel-div form-check">
+        <input type="radio" class="form-check-input" name="position" />
+        <input type="radio" class="form-check-input" name="position" />
+        <input type="radio" class="form-check-input" name="position" checked />
+        <input type="radio" class="form-check-input" name="position" />
+        <input type="radio" class="form-check-input" name="position" />
+        <main id="carousel">
+            <div class="item">
+                <div style="padding: 10px">
+                    <img style="margin-bottom: 10px" class="img-thumbnail" src="~/images/headphones-purple.jpg" alt="..." />
+                    <h5 style="margin-top: 10px; text-align:center; color: black">Next-Level Beats</h5>
+                    <p style="text-align:center; color: black">Unlock the rhythm of your soul with MusicApp - where melody meets technology to create an immersive musical journey.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div style="padding: 10px">
+                    <img style="margin-bottom: 10px" class="img-thumbnail" src="~/images/cassette-black.jpg" alt="..." />
+                    <h5 style="margin-top: 10px; text-align:center; color: black">Journey of Sound</h5>
+                    <p style="text-align:center; color: black">Step into a world of harmony and rhythm with MusicApp. Immerse yourself in a symphony of sounds and let the melodies transport you to another dimension.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div style="padding: 10px">
+                    <img style="margin-bottom: 10px" class="img-thumbnail" src="~/images/concert.jpg" alt="..." />
+                    <h5 style="margin-top: 10px; text-align:center; color: black">Rhythmic Revolution</h5>
+                    <p style="text-align:center; color: black">Discover new music, create your own playlists, check out all the latest hits in your country and worldwide. Share all your favorite songs with MusicApp!</p>
+                </div>
+            </div>
+            <div class="item">
+                <div style="padding: 10px">
+                    <img style="margin-bottom: 10px" class="img-thumbnail" src="~/images/record-player-yellow.jpg" alt="..." />
+                    <h5 style="margin-top: 10px; text-align:center; color: black">Sonic Oasis</h5>
+                    <p style="text-align:center; color: black">Fuel your passion for music with our groundbreaking MusicApp. From catchy hooks to mind-blowing solos, we've got it all. Join the revolution and experience music like never before.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div style="padding: 10px">
+                    <img style="margin-bottom: 10px" class="img-thumbnail" src="~/images/ukulele.jpg" alt="..." />
+                    <h5 style="margin-top: 10px; text-align:center; color: black">Passion Igniter</h5>
+                    <p style="text-align:center; color: black">Discover the future of music exploration with MusicApp. Uncover hidden gems, rediscover old favorites, and embark on a sonic journey like no other.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+<section class="clean-block clean-hero">
+    <div class="text">
+            <p class="text-secondary-emphasis" style="background-color: rgba(249, 249, 249, 0.7); text-align:center; padding: 10px">
+                Music possesses a remarkable power that transcends language and unites hearts and souls across the globe. It has the ability to inspire, uplift, and evoke a multitude of emotions within us. Through its enchanting melodies and poetic lyrics, music has the unique ability to ignite passion, spark revolutions, and foster connections between individuals from all walks of life. It is a universal language that breaks down barriers, evokes empathy, and unites us in moments of pure bliss. Whether in times of joy, sorrow, celebration, or contemplation, music stands as a constant companion, guiding us through the complexities of life and reminding us of the profound beauty that resides within us all.</p>
+    </div>
+</section>
+<div class="row justify-content-center">
+    <div class="col-sm-6 col-lg-4">
+        <div class="card text-center clean-card">
+            <img class="card-img-top w-100 d-block" src="/images/top-charts.jpg" style="height: 300px; border: 10px solid white">
+            <div class="card-body info">
+                <h4 class="card-title"><strong>Greatest All Time Hits</strong><br></h4>
+                    <form method="post" asp-action="GetAllTimeSongs">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-info" type="submit">See Greatest Top Hits</button>
+                        </div>
+                    </form>
+                <p class="card-text" style="margin-top: 10px">
+                        Whether you're a fan of rock, pop, soul, or any genre in between, these legendary hits will captivate your senses and remind you why they have stood the test of time.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+        <div class="card text-center clean-card">
+                <img class="card-img-top w-100 d-block" src="/images/music.jpg" style="height: 300px; border: 10px solid white">
+            <div class="card-body info">
+                <h4 class="card-title"><strong>American Museum of Natural History</strong><br></h4>
+                    <p><button type="button" class="btn btn-outline-info">
+                        Learn More
+                    </button>
+                    </p>
+                <p class="card-text">
+                    Eight permanent exhibit halls showcase all that's interesting about
+                    the natural environment of our planet, from science and the environment to animals
+                    and fossils.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+        <div class="card text-center clean-card">
+                <img class="card-img-top w-100 d-block" src="/images/music.jpg" style="height: 300px; border: 10px solid white">
+            <div class="card-body info">
+                <h4 class="card-title"><strong>Times Square</strong><br></h4>
+                    <p><button type="button" class="btn btn-outline-info">
+                        Learn More
+                        </button>
+                    </p>
+                <p class="card-text">
+                    Times Square is the place to go in New York in the evening, but
+                    still exciting at any time of day. This is the location of<strong>
+                        &nbsp;New Year's
+                        Eve Celebrations and the famous "ball drop"&nbsp;
+                    </strong>at midnight, when all
+                    streets are filled with people.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</main>

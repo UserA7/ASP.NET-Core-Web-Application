@@ -17,12 +17,48 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\cassette-black.jpg",
+      "PackagePath": "staticwebassets\\images\\cassette-black.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\concert.jpg",
+      "PackagePath": "staticwebassets\\images\\concert.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\headphones-blue.jpg",
+      "PackagePath": "staticwebassets\\images\\headphones-blue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\headphones-pink.jpg",
+      "PackagePath": "staticwebassets\\images\\headphones-pink.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\headphones-purple.jpg",
+      "PackagePath": "staticwebassets\\images\\headphones-purple.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\music.intro.png",
       "PackagePath": "staticwebassets\\images\\music.intro.png"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\music.jpg",
       "PackagePath": "staticwebassets\\images\\music.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\no image.jpg",
+      "PackagePath": "staticwebassets\\images\\no image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\record-player-yellow.jpg",
+      "PackagePath": "staticwebassets\\images\\record-player-yellow.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\top-charts.jpg",
+      "PackagePath": "staticwebassets\\images\\top-charts.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\ukulele.jpg",
+      "PackagePath": "staticwebassets\\images\\ukulele.jpg"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\js\\site.js",

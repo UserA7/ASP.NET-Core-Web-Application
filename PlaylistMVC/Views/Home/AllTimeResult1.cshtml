@@ -1,0 +1,23 @@
+﻿@model List<PlaylistMVC.Models.AllTimeWorld>;
+
+@if(Model.Count > 0)
+{
+    <div class="h-50 d-inline-block">
+        <div class="row h-50 py-3 align-items-center justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="row justify-content-center" style="background-color: rgba(221, 255, 218,0.5); margin-bottom: 10px; border: 1px solid #fff; padding: 10px">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <img class="img-thumbnail" style="width: 110px; height: 110px;" src="@item.Image" onerror="this.onerror=null;this.src='https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-dimensions/2500?v=v2&px=-1';" />
+                    </div>
+                    <div class="col-9">
+                        <h5>Rank: @item.Rank</h5>
+                        <h3>@item.Title</h3>
+                        <h6>@item.Artist</h6>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
