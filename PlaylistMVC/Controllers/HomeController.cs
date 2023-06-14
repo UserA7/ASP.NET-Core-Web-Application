@@ -55,5 +55,30 @@ namespace PlaylistMVC.Controllers
 
             }
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GetTopByMonthlyListeners()
+        {
+            using (var _httpClient = new HttpClient())
+            {
+                _httpClient.DefaultRequestHeaders.Add("X-RapidAPI-Key", "fd598c74cbmsh70010f8e638b9c8p115781jsn56068c4a489d");
+                string apiUrl = "https://spotify81.p.rapidapi.com/top_20_by_monthly_listeners";
+
+                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsStringAsync();
+                    List<TopByMonthlyListeners> topByMonthlyListenersData = JsonConvert.DeserializeObject<List<TopByMonthlyListeners>>(result);
+                    return View("TopByMonthlyListeners", topByMonthlyListenersData);
+                }
+                else
+                {
+                    // Handle the error scenario, e.g., return an error view
+                    return View("Error");
+                }
+
+            }
+        }
     }
 }

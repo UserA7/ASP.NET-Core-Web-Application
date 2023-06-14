@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PJgF6KknT7Xahu5Y+k6HaMEy35IAtrpf+Nvb7webZJo=",
+  "Hash": "KVXXWB7SC2URsNbJjIl/+X/y+FAyBg1eTgq++V8OrS8=",
   "Source": "PlaylistMVC",
   "BasePath": "_content/PlaylistMVC",
   "Mode": "Default",
@@ -1273,6 +1273,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\record-player-yellow.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\singer.jpg",
+      "SourceId": "PlaylistMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\",
+      "BasePath": "_content/PlaylistMVC",
+      "RelativePath": "images/singer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\singer.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\top-charts.jpg",

@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\images\\record-player-yellow.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\singer.jpg",
+      "PackagePath": "staticwebassets\\images\\singer.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\GOD\\PlaylistMVC\\wwwroot\\images\\top-charts.jpg",
       "PackagePath": "staticwebassets\\images\\top-charts.jpg"
     },

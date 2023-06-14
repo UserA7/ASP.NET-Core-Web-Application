@@ -1,0 +1,17 @@
+﻿@model List<PlaylistMVC.Models.TopByMonthlyListeners>;
+
+<div class="container py-2">
+    <h1 style="text-align:center">Top 50 Artists By Monthly Listeners</h1>
+    <div class="row">
+        @foreach (var topSong in Model)
+        {
+            <div class="col-sm py-2 py-md-3" style="flex: 1 0 50%">
+                <div class="card card-body" style="background-color:rgba(255,255,255,0.5)">
+                    <h3><b>@topSong.Rank</b></h3>
+                    <h4>Artist: <b>@topSong.Artist</b></h4>
+                    <h6>Monthly Listeners: <b>@topSong.MonthlyListeners</b></h6>
+                </div>
+            </div>
+        }
+    </div>
+</div>

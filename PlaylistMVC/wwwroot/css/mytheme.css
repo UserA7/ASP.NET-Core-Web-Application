@@ -2792,6 +2792,7 @@ textarea.form-control-lg {
 
 .form-floating {
     position: relative;
+    margin-bottom: 5px;
 }
 
     .form-floating > .form-control,
