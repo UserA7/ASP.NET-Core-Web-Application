@@ -36,7 +36,7 @@ namespace PlaylistMVC.Controllers
         {
             using(var _httpClient = new HttpClient())
             {
-                _httpClient.DefaultRequestHeaders.Add("X-RapidAPI-Key", "fd598c74cbmsh70010f8e638b9c8p115781jsn56068c4a489d");
+                _httpClient.DefaultRequestHeaders.Add("X-RapidAPI-Key", "082f117460msh79bee4457f3ad9ep152c63jsn91369bdc832e");
                 string apiUrl = "https://billboard3.p.rapidapi.com/greatest-hot-100-singles";
 
                 HttpResponseMessage response = await _httpClient.GetAsync($"{apiUrl}?range=1-20");
