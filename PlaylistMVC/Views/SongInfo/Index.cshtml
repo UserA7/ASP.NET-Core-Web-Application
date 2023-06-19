@@ -4,8 +4,8 @@
     ViewData["Title"] = "Index";
 }
 <div>
-   <h1 style="display:inline">My Playlist </h1>
-   <img src="/images/music.intro.png" style=" display:inline; width:110px; height:110px;" alt="Intro" />
+    <h1 style="display:inline">My Playlist </h1>
+    <img src="/images/music.intro.png" style=" display:inline; width:110px; height:110px;" alt="Intro" />
 </div>
 @*<p style="display:inline-block;">
     <h1 style="display:inline">My Playlist</h1>
@@ -26,19 +26,33 @@
             <th>
                 @Html.DisplayNameFor(model => model.ArtistName)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongInfoGenres)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SongName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArtistName)
-            </td>
-            <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArtistName)
+                </td>
+                <td>
+                    @foreach (var genre in item.SongInfoGenres)
+                    {
+                        @genre.Genre.Name
+                        if (genre != item.SongInfoGenres.Last())
+                        {
+                            @:,
+                        }
+                    }
+                </td>
+                <td>
                     <form style="display:inline">
                         <button class="button-edit" asp-action="Edit" asp-route-id="@item.Id">Edit</button>
                     </form> |
@@ -48,8 +62,8 @@
                     <form style="display:inline">
                         <button class="button-delete" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
                     </form>
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

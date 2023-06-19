@@ -56,5 +56,35 @@ app.MapControllerRoute(
 
 app.MapRazorPages();
 
+using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+{
+
+    var context = serviceScope.ServiceProvider.GetRequiredService<MyDbContext>();
+    try
+    {
+        var genres = context.Genres;
+        if (!genres.Any())
+        {
+            List<Genre> genresList = new List<Genre>();
+            genresList.Add(new Genre { Name = "Pop" });
+            genresList.Add(new Genre { Name = "Rock" });
+            genresList.Add(new Genre { Name = "Metal" });
+            genresList.Add(new Genre { Name = "Hip Hop" });
+            genresList.Add(new Genre { Name = "Country Music" });
+            genresList.Add(new Genre { Name = "Jazz" });
+            genresList.Add(new Genre { Name = "Disco" });
+
+            genres.AddRange(genresList);
+            context.SaveChanges();
+
+        }
+    }
+    catch (Exception exception)
+    {
+        Console.WriteLine(exception.Message);
+        throw;
+    }
+}
+
 app.Run();
 

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
+using PlaylistMVC.Migrations.MyDb;
 using PlaylistMVC.Models;
 
 namespace PlaylistMVC.Controllers
@@ -22,7 +24,7 @@ namespace PlaylistMVC.Controllers
         public async Task<IActionResult> Index()
         {
               return _context.SongInfo != null ? 
-                          View(await _context.SongInfo.ToListAsync()) :
+                          View(await _context.SongInfo.Include(song => song.SongInfoGenres).ThenInclude(g => g.Genre).ToListAsync()) :
                           Problem("Entity set 'MyDbContext.SongInfo'  is null.");
         }
 
@@ -47,7 +49,29 @@ namespace PlaylistMVC.Controllers
         // GET: SongInfo/Create
         public IActionResult Create()
         {
-            return View();
+            var genres = _context.Genres;
+            var model = new CreateSongInfoModelView { Genres = GenresToCheckboxViewModel(genres.ToList()), SongInfo = new SongInfo() };
+            return View(model);
+        }
+
+        private List<CheckboxViewModel> GenresToCheckboxViewModel(List<Genre> genres, List<SongInfoGenre> dbGenres = null)
+        {
+            List<CheckboxViewModel> checkboxViewModels = new List<CheckboxViewModel>();
+            if (!genres.Any())
+            {
+                return checkboxViewModels;
+            }
+            foreach (var genre in genres)
+            {
+                bool isChecked = false;
+                if(dbGenres != null)
+                {
+                    isChecked = dbGenres.Where(g => g.Genre.Id == genre.Id).Any();
+                }
+                var model = new CheckboxViewModel { Id = genre.Id, LabelName = genre.Name, IsChecked = isChecked };
+                checkboxViewModels.Add(model);
+            }
+            return checkboxViewModels;
         }
 
         // POST: SongInfo/Create
@@ -55,15 +79,20 @@ namespace PlaylistMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,SongName,ArtistName")] SongInfo songInfo)
+        public async Task<IActionResult> Create( CreateSongInfoModelView model)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(songInfo);
+                var genres = model.Genres.Where(gen => gen.IsChecked).ToList();
+                List<SongInfoGenre> dbGenres = new List<SongInfoGenre>(); 
+                
+                CreateGenres(genres, dbGenres, model.SongInfo);
+                model.SongInfo.SongInfoGenres = dbGenres;
+                _context.Add(model.SongInfo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(songInfo);
+            return View(model.SongInfo);
         }
 
         // GET: SongInfo/Edit/5
@@ -74,12 +103,14 @@ namespace PlaylistMVC.Controllers
                 return NotFound();
             }
 
-            var songInfo = await _context.SongInfo.FindAsync(id);
+            var songInfo = _context.SongInfo.Include(s => s.SongInfoGenres).ThenInclude(g => g.Genre).FirstOrDefault(s => s.Id == id);
             if (songInfo == null)
             {
                 return NotFound();
             }
-            return View(songInfo);
+            var genres = _context.Genres;
+            var model = new CreateSongInfoModelView { Genres = GenresToCheckboxViewModel(genres.ToList(), songInfo.SongInfoGenres), SongInfo = songInfo };
+            return View(model);
         }
 
         // POST: SongInfo/Edit/5
@@ -87,9 +118,9 @@ namespace PlaylistMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,SongName,ArtistName")] SongInfo songInfo)
+        public async Task<IActionResult> Edit(int id, CreateSongInfoModelView songInfoModel)
         {
-            if (id != songInfo.Id)
+            if (id != songInfoModel.SongInfo.Id)
             {
                 return NotFound();
             }
@@ -98,12 +129,25 @@ namespace PlaylistMVC.Controllers
             {
                 try
                 {
-                    _context.Update(songInfo);
+                    var dbSongInfo = await _context.SongInfo.Include(s => s.SongInfoGenres).ThenInclude(g => g.Genre).FirstAsync(s => s.Id == id);
+                    if (dbSongInfo == null)
+                    {
+                        return NotFound();
+                    }
+                    var inputGenres = songInfoModel.Genres.Where(g => g.IsChecked).ToList();
+                    var dbGenres = dbSongInfo.SongInfoGenres;
+                    
+                    HandleGenres(inputGenres, dbGenres, dbSongInfo);
+
+                    dbSongInfo.ArtistName = songInfoModel.SongInfo.ArtistName;
+                    dbSongInfo.SongName = songInfoModel.SongInfo.SongName;
+                    dbSongInfo.SongInfoGenres = dbGenres;
+                    _context.Update(dbSongInfo);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SongInfoExists(songInfo.Id))
+                    if (!SongInfoExists(songInfoModel.SongInfo.Id))
                     {
                         return NotFound();
                     }
@@ -114,9 +158,44 @@ namespace PlaylistMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(songInfo);
+            return View(songInfoModel.SongInfo);
         }
 
+        private void CreateGenres(List<CheckboxViewModel> inputGenres, List<SongInfoGenre> dbGenres, SongInfo songInfo)
+        {
+
+            foreach (var genre in inputGenres)
+            {
+                var dbGenre = _context.Genres.FirstOrDefault(g => g.Id == genre.Id);
+                if (dbGenre == null)
+                {
+                    continue;
+                }
+                dbGenres.Add(new SongInfoGenre { Genre = dbGenre, SongInfo = songInfo });
+            }
+        }
+
+        private void HandleGenres(List<CheckboxViewModel> inputGenres, List<SongInfoGenre> dbGenres, SongInfo dbSongInfo)
+        {
+            if (dbGenres.Count == 0 && inputGenres.Count > 0)
+            {
+                CreateGenres(inputGenres, dbGenres, dbSongInfo);
+            }
+            else if (dbGenres.Count > 0 && inputGenres.Count == 0)
+            {
+                dbGenres.Clear();
+            }
+            else if (dbGenres.Count > inputGenres.Count)
+            {
+                var match = dbGenres.FindAll(m => inputGenres.Any(ig => ig.Id == m.Genre.Id));
+                dbGenres.RemoveAll(g => !match.Any(m => m.Id == g.Id));
+            }
+            else if (inputGenres.Count > dbGenres.Count)
+            {
+                var match = inputGenres.FindAll(m => !dbGenres.Any(ig => ig.Genre.Id == m.Id));
+                CreateGenres(match, dbGenres, dbSongInfo);
+            }
+        }
         // GET: SongInfo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

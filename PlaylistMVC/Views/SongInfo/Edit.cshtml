@@ -1,4 +1,4 @@
-﻿@model PlaylistMVC.Models.SongInfo
+﻿@model PlaylistMVC.Models.CreateSongInfoModelView
 
 @{
     ViewData["Title"] = "Edit";
@@ -11,18 +11,30 @@
     <div class="col-md-4">
         <form asp-action="Edit" style="display:inline">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="@Model.SongInfo.Id" />
             <div class="form-group">
-                <label asp-for="SongName" class="control-label">Song Name</label>
-                <input asp-for="SongName" class="form-control" />
-                <span asp-validation-for="SongName" class="text-danger"></span>
+                <label asp-for="@Model.SongInfo.SongName" class="control-label">Song Name</label>
+                <input asp-for="@Model.SongInfo.SongName" class="form-control" />
+                <span asp-validation-for="@Model.SongInfo.SongName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ArtistName" class="control-label">Artist Name</label>
-                <input asp-for="ArtistName" class="form-control" />
-                <span asp-validation-for="ArtistName" class="text-danger"></span>
+                <label asp-for="@Model.SongInfo.ArtistName" class="control-label">Artist Name</label>
+                <input asp-for="@Model.SongInfo.ArtistName" class="form-control" />
+                <span asp-validation-for="@Model.SongInfo.ArtistName" class="text-danger"></span>
             </div><br />
 
+            <div>
+                @for (var index = 0; index < @Model.Genres.Count(); index++)
+                {
+                    <input type="checkbox" asp-for="@Model.Genres[index].IsChecked" class="form-check-input" />
+                    <label class="form-check-label" asp-for="@Model.Genres[index].IsChecked">
+                        @Model.Genres[index].LabelName
+                    </label>
+                    <input type="hidden" asp-for="@Model.Genres[index].Id" />
+                    <input type="hidden" asp-for="@Model.Genres[index].LabelName" />
+                    <br />
+                }
+            </div>
             <form asp-action="Edit" style="display:inline">
                 <button class="button-edit" type="submit" value="Update">Update</button>
             </form>

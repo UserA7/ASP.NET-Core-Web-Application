@@ -8,5 +8,7 @@ namespace PlaylistMVC.Models
             : base(options)
         { }
         public DbSet<SongInfo> SongInfo { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<SongInfoGenre> SongInfoGenre { get; set; }
     }
 }

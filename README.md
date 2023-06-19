@@ -16,6 +16,11 @@ User authentication with register and login options
 Playlist creation and management
 Integration with an external API for data retrieval
 
+Entities and relations
+SongInfo Entity: (int) Id , (string) SongName , (string) ArtistName
+Genre Entity: (int) Id , (string) Name
+SongInfoGenre: Relation table between SongInfo and Genre (many-to-many relationship)
+
 Database Configuration
 The database is configured using Entity Framework Core.
 The connection string is stored in the appsettings.json file.
